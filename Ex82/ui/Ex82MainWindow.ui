@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>816</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:white</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #1E3A8A;
+    font-size: 20pt;
+    font-weight: bold;
+}</string>
+        </property>
+        <property name="text">
+         <string>Electricity Bill Calculator </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="labelCustomerName">
+          <property name="styleSheet">
+           <string notr="true">color: #1E3A8A;
+font-size: 12pt;
+font-weight: 600;
+</string>
+          </property>
+          <property name="text">
+           <string>Customer Name: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdiCustomerName">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #1F2937;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3B82F6;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelkWhUsed">
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #1E3A8A;
+font-size: 12pt;
+font-weight: 600;
+</string>
+        </property>
+        <property name="text">
+         <string>Previous month kWh Used:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditPrevious">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #1F2937;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3B82F6;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">color: #1E3A8A;
+font-size: 12pt;
+font-weight: 600;
+</string>
+        </property>
+        <property name="text">
+         <string>Current month kWh Used:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditCurrent">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #1F2937;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3B82F6;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="labelCustomerGroup">
+          <property name="styleSheet">
+           <string notr="true">color: #1E3A8A;
+font-size: 12pt;
+font-weight: 600;
+</string>
+          </property>
+          <property name="text">
+           <string>Customer Group: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButtonGroup1">
+          <property name="styleSheet">
+           <string notr="true">
+/* QRadioButton tổng thể */
+QRadioButton {
+    color: #1F2937;
+    font-size: 18px;
+    font-family: &quot;Segoe UI&quot;, BlinkMacSystemFont, sans-serif;
+    spacing: 8px;
+}
+
+QRadioButton:disabled {
+    color: #9CA3AF;
+}
+
+/* Kích thước khung Radio */
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+/* Trạng thái: Chưa chọn */
+QRadioButton::indicator:unchecked {
+    border: 2px solid #D1D5DB;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+}
+
+/* Trạng thái: Rê chuột khi chưa chọn */
+QRadioButton::indicator:unchecked:hover {
+    border-color: #3B82F6;
+    background-color: #EFF6FF;
+}
+
+/* Trạng thái: Đã chọn */
+QRadioButton::indicator:checked {
+    border: 6px solid #2563EB;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+}
+
+/* Trạng thái: Rê chuột khi đã chọn */
+QRadioButton::indicator:checked:hover {
+    border-color: #1D4ED8;
+}
+
+/* Trạng thái: Vô hiệu hóa (Disabled) */
+QRadioButton::indicator:disabled {
+    border-color: #E5E7EB;
+    background-color: #F3F4F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>Group 1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButtonGroup2">
+          <property name="styleSheet">
+           <string notr="true">
+/* QRadioButton tổng thể */
+QRadioButton {
+    color: #1F2937;
+    font-size: 17px;
+    font-family: &quot;Segoe UI&quot;, BlinkMacSystemFont, sans-serif;
+    spacing: 8px;
+}
+
+QRadioButton:disabled {
+    color: #9CA3AF;
+}
+
+/* Kích thước khung Radio */
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+/* Trạng thái: Chưa chọn */
+QRadioButton::indicator:unchecked {
+    border: 2px solid #D1D5DB;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+}
+
+/* Trạng thái: Rê chuột khi chưa chọn */
+QRadioButton::indicator:unchecked:hover {
+    border-color: #3B82F6;
+    background-color: #EFF6FF;
+}
+
+/* Trạng thái: Đã chọn */
+QRadioButton::indicator:checked {
+    border: 6px solid #2563EB;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+}
+
+/* Trạng thái: Rê chuột khi đã chọn */
+QRadioButton::indicator:checked:hover {
+    border-color: #1D4ED8;
+}
+
+/* Trạng thái: Vô hiệu hóa (Disabled) */
+QRadioButton::indicator:disabled {
+    border-color: #E5E7EB;
+    background-color: #F3F4F6;
+}</string>
+          </property>
+          <property name="text">
+           <string>Group 2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QPushButton" name="pushButtonCalc">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #1D4ED8;
+}
+
+QPushButton:pressed {
+    background-color: #1E40AF;
+}</string>
+          </property>
+          <property name="text">
+           <string>Calculate</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonClose">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #F3F4F6;
+    border: 1px solid #9CA3AF;
+}</string>
+          </property>
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="labelResult">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #1E3A8A;
+    font-size: 12pt;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="text">
+           <string>Result:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditResult">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 12px;
+    color: #1F2937;
+    font-size: 10pt;
+}
+
+QTextEdit:focus {
+    border: 2px solid #3B82F6;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>816</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
